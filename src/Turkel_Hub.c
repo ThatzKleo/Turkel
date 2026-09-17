@@ -27,13 +27,16 @@ int main(){
     SetTextureFilter(main_font.texture, TEXTURE_FILTER_BILINEAR);
 
     // GUI Style
-    
+    GuiSetStyle(DEFAULT, TEXT_ALIGNMENT, TEXT_ALIGN_CENTER);
+    GuiSetStyle(DEFAULT, TEXT_SIZE, 46);
+    GuiSetFont(main_font);
 
     while(!WindowShouldClose()){
         BeginDrawing();
         ClearBackground(BACK_COLOR);
         GuiDrawRectangle(left_panel_back, 3, UI_BORDER_COLOR, UI_BACK_COLOR );
         GuiDrawRectangle(left_panel_header, 3, UI_BORDER_COLOR, UI_BACK_COLOR );
+        GuiLabel(left_panel_header, "Turkel");
 
         EndDrawing();
     }
