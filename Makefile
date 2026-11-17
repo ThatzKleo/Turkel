@@ -1,2 +1,4 @@
-main: src/Turkel_Hub.c
-	gcc -o build/main src/Turkel_Hub.c -Iinclude -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+Flags := -I/home/thatzkleo/Dokumenty/libraries -lglfw3 -lGL -lX11 -lpthread -lXrandr -lXi -ldl
+
+make:
+	gcc src/Turkel.c -o build/main $(Flags)
